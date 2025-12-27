@@ -1,0 +1,41 @@
+// sass --watch input.scss output.css
+.app-container {
+  max-width: 1300px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+.carousel{
+  width:90%;
+  margin:0px auto;
+}
+
+
+/* slick-list is for st the height of sliding area  */
+.slick-list{
+  height: 360px;
+}
+
+/* .slick-slide is for per slide img container*/
+.slick-slide{
+  height:350px;
+  margin:10px;
+  min-width:300px;
+}
+
+/* image inside the slide  */
+/* .slick-slide img{
+  width:100%;
+  height: 400px;
+ object-fit: cover;
+  border: 2px solid #fff;
+} */
+
+.slick-current{
+  scroll-snap-align: center;
+}
+.wrapper .slick-dots li button:before {
+  font-size:20px;
+  color:white;
+}

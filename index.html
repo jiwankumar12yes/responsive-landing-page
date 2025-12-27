@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--run tailwind :- npx @tailwindcss/cli -i tailwind.css -o style.css --watch -->
+  <!--  sass --watch input.scss output.css -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"
+    />
+    <!-- End carousel -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wdth,wght@75..100,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Final</title>
+  </head>
+  <body class="[&_button]:hover:cursor-pointer">
+    <header class="py-5">
+      <div class="app-container">
+        <nav class="flex items-center justify-between">
+          <div class="">
+            <h2 class="text-[#5230DA] text-3xl font-bold">LOGO</h2>
+          </div>
+
+          <div class="ml-8 hidden lg:block" id="menu-items">
+            <ul
+              class="lg:flex lg:gap-4 flex-col lg:flex-row items-center font-semibold text-lg capitalize"
+              id="mobile-menu"
+            >
+              <li
+                class="hover:bg-gray-100 rounded-lg hover:underline decoration-2 hover:scale-105 decoration-gray-400 px-4 py-2 underline-offset-4"
+              >
+                <a href=""> Home</a>
+              </li>
+              <li
+                class="hover:bg-gray-100 rounded-lg hover:underline decoration-2 hover:scale-105 decoration-gray-400 px-4 py-2 underline-offset-4"
+              >
+                <a href=""> about</a>
+              </li>
+              <li
+                class="hover:bg-gray-100 rounded-lg hover:underline decoration-2 hover:scale-105 decoration-gray-400 px-4 py-2 underline-offset-4"
+              >
+                <a href=""> service</a>
+              </li>
+              <li
+                class="hover:bg-gray-100 rounded-lg hover:underline decoration-2 hover:scale-105 decoration-gray-400 px-4 py-2 underline-offset-4"
+              >
+                <a href=""> portfolio</a>
+              </li>
+              <li
+                class="hover:bg-gray-100 rounded-lg hover:underline decoration-2 hover:scale-105 decoration-gray-400 px-4 py-2 underline-offset-4"
+              >
+                <a href=""> blog</a>
+              </li>
+              <li
+                class="hover:bg-gray-100 rounded-lg hover:underline decoration-2 hover:scale-105 decoration-gray-400 px-4 py-2 underline-offset-4"
+              >
+                <a href=""> contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:flex xl:gap-8 gap-4 text-xl hidden">
+            <button type="button" class="border-r px-3 my-3 border-gray-300">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button type="button" class="">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button
+              type="button"
+              class="bg-[#5230DA] hover:bg-[#4320ce] px-8 py-2.5 text-white rounded-lg font-semibold"
+            >
+              Get in Touch
+            </button>
+          </div>
+          <button
+            type="button"
+            class="text-2xl lg:hidden"
+            id="menu-button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Toggle menu"
+          >
+            <!-- <i class="fa-solid fa-bars-staggered"></i> -->
+            <!-- Hamburger Icon (3 bars) -->
+            <svg
+              id="menu-icon-open"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <!-- Close Icon (X) - Hidden by default -->
+            <svg
+              id="menu-icon-close"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="">
+      <section
+        class="hero bg-[url(images/hero.jpg)] h-170 relative bg-cover bg-center"
+      >
+        <div class="app-container h-full">
+          <div
+            class="flex gap-9 flex-col md:w-1/2 mx-auto text-white my-auto justify-center h-3/4"
+          >
+            <h1
+              class="md:text-5xl text-3xl font-medium text-center md:leading-15"
+            >
+              Smart IT Solutions For <br />
+              Your Business
+            </h1>
+            <p class="text-center font-medium">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+              ipsa maiores quam cum quae illo laboriosam unde similique harum
+              obcaecati, provident facilis
+            </p>
+            <button
+              type="button"
+              class="capitalize bg-white mx-auto w-fit px-4 py-3 rounded-lg text-sm font-medium text-gray-800 border border-[#7D63E3]"
+            >
+              Schedule a free consultation
+              <span
+                class="border-l border-gray-400 my-1 ml-3 text-[#7D63E3] px-3"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </button>
+          </div>
+          <div
+            class="grid md:gap-5 lg:gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 grid-rows-1 xl:grid-cols-4"
+          >
+            <div
+              class="flex gap-5 flex-col items-center text-center bg-white border border-gray-300 rounded-xl w-full h-fit p-4"
+            >
+              <div
+                class="text-3xl bg-[#E5E0F9] rounded-full px-7 py-7 aspect-square"
+              >
+                <i class="fa-solid fa-robot text-[#775BE2] text-3xl"></i>
+              </div>
+              <h2 class="text-2xl capitalize">chatbot & automation</h2>
+              <hr class="h-2 w-full text-gray-400" />
+              <p class="text-center line-clamp-3 text-gray-800">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                excepturi?sit amet consectetur adipisicing elit. Dicta,
+                excepturi?
+              </p>
+              <button
+                class="capitalize bg-[#5230DA] mx-auto items-center w-full px-8 py-2.5 mt-5 rounded-lg text-sm font-medium text-white border-[#7D63E3] flex justify-around"
+              >
+                <span class="capitalize">read more</span>
+                <span class="border-l border-gray-400 my-1 text-white] ps-3"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </button>
+            </div>
+            <div
+              class="md:flex gap-5 flex-col items-center text-center bg-white border hidden border-gray-300 rounded-xl w-full h-fit p-4"
+            >
+              <div
+                class="text-3xl bg-[#E5E0F9] rounded-full px-7 py-7 aspect-square"
+              >
+                <i class="fa-solid fa-code text-[#775BE2] text-3xl"></i>
+              </div>
+              <h2 class="text-2xl capitalize">chatbot & automation</h2>
+              <hr class="h-2 w-full text-gray-400" />
+              <p class="text-center line-clamp-3 text-gray-800">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                numquam eaque veniam, temporibus consectetur ratione excepturi,
+                aliquam dolorum cupiditate maxime autem dolore ipsum recusandae
+                eligendi sint necessitatibus, exercitationem obcaecati incidunt.
+              </p>
+              <button
+                class="capitalize bg-[#5230DA] items-center mx-auto w-full px-8 py-2.5 mt-5 rounded-lg text-sm font-medium text-white border-[#7D63E3] flex justify-around"
+              >
+                <span class="capitalize">read more</span>
+                <span class="border-l border-gray-400 my-1 text-white] ps-3"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </button>
+            </div>
+            <div
+              class="md:flex gap-5 flex-col items-center text-center bg-white border hidden border-gray-300 rounded-xl w-full h-fit p-4"
+            >
+              <div
+                class="text-3xl bg-[#E5E0F9] rounded-full px-7 py-7 aspect-square"
+              >
+                <i class="fa-solid fa-code text-[#775BE2] text-3xl"></i>
+              </div>
+              <h2 class="text-2xl capitalize">chatbot & automation</h2>
+              <hr class="h-2 w-full text-gray-400" />
+              <p class="text-center line-clamp-3 text-gray-800">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                numquam eaque veniam, temporibus consectetur ratione excepturi,
+                aliquam dolorum cupiditate maxime autem dolore ipsum recusandae
+                eligendi sint necessitatibus, exercitationem obcaecati incidunt.
+              </p>
+              <button
+                class="capitalize bg-[#5230DA] mx-auto items-center w-full px-8 py-2.5 mt-5 rounded-lg text-sm font-medium text-white border-[#7D63E3] flex justify-around"
+              >
+                <span class="capitalize">read more</span>
+                <span class="border-l border-gray-400 my-1 text-white] ps-3"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </button>
+            </div>
+            <div
+              class="xl:flex gap-5 flex-col items-center text-center bg-white border hidden border-gray-300 rounded-xl w-full h-fit p-4"
+            >
+              <div
+                class="text-3xl bg-[#E5E0F9] rounded-full px-7 py-7 aspect-square"
+              >
+                <i class="fa-solid fa-code text-[#775BE2] text-3xl"></i>
+              </div>
+              <h2 class="text-2xl capitalize">chatbot & automation</h2>
+              <hr class="h-2 w-full text-gray-400" />
+              <p class="text-center line-clamp-3 text-gray-800">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                numquam eaque veniam, temporibus consectetur ratione excepturi,
+                aliquam dolorum cupiditate maxime autem dolore ipsum recusandae
+                eligendi sint necessitatibus, exercitationem obcaecati incidunt.
+              </p>
+              <button
+                class="capitalize bg-[#5230DA] items-center mx-auto w-full px-8 py-2.5 mt-5 rounded-lg text-sm font-medium text-white border-[#7D63E3] flex justify-around"
+              >
+                <span class="capitalize">read more</span>
+                <span class="border-l border-gray-400 my-1 text-white] ps-3"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us mt-75">
+        <div class="app-container">
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            <div class="flex flex-col md:col-span-2 lg:col-span-2 gap-5">
+              <h2
+                class="bg-[#5230DA] px-3 py-2 w-fit text-white text-xl rounded"
+              >
+                About Us
+              </h2>
+              <h3
+                class="capitalize lg:text-2xl md:text-2xl text-lg font-medium text-gray-800"
+              >
+                who are we? are you trusted IT <br />
+                Solutions partner
+              </h3>
+              <p class="text-gray-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis sint deserunt provident eaque architecto? Tempore
+                dolorum expedita voluptate eos inventore, odit, distinctio quos,
+                optio est aut quas dolorem delectus quidem!
+              </p>
+              <div class="flex flex-col md:flex-row gap-10 items-center">
+                <video
+                  controls
+                  autoplay="true"
+                  muted
+                  class="rounded-2xl w-full h-60 md:h-auto md:w-3/12"
+                >
+                  <source
+                    src="https://www.youtube.com/watch?v=OkktfeAR-Rk"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <ul class="space-y-3 list">
+                  <li class="space-y-2 flex items-center gap-3">
+                    <i
+                      class="fa-solid fa-microchip text-7xl text-[#5230DA]"
+                    ></i>
+                    <div>
+                      <h3
+                        class="md:text-xl lg:text-2xl text-lg capitalize text-gray-800 font-medium"
+                      >
+                        modern technoloy
+                      </h3>
+                      <p class="line-clamp-2 text-gray-700">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id suscipit laborum saepe optio beatae illum.
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="space-y-2 flex items-center gap-3">
+                    <i
+                      class="fa-solid fa-person-dots-from-line text-7xl text-[#5230DA]"
+                    ></i>
+                    <div>
+                      <h3
+                        class="md:text-xl lg:text-2xl text-lg capitalize text-gray-800 font-medium"
+                      >
+                        modern technoloy
+                      </h3>
+                      <p class="line-clamp-2 text-gray-700">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id suscipit laborum saepe optio beatae illum.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col md:flex-row gap-10 md:items-center">
+                <button
+                  class="text-white font-medium bg-[#5230DA] text-sm w-fit md:w-auto px-1 py-3 rounded-lg flex divide-gray-200 justify-between divide-x"
+                >
+                  <span class="px-5">More About Us</span>
+                  <span class="px-3"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
+                </button>
+
+                <div class="flex gap-5 items-center">
+                  <span
+                    class="text-4xl text-[#5230DA] bg-[#E6DFFF] rounded-full aspect-square px-4 py-3"
+                    ><i class="fa-solid fa-headphones"></i
+                  ></span>
+                  <div>
+                    <p class="font-medium">contact us 24/7</p>
+                    <p class="slashed-zero tabular-nums font-bold">
+                      +91 9876543210
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:ps-15 py-1 relative md:col-span-1 lg:col-span-2 xl::overflow-visible overflow-hidden lg:h-full md:h-80 h-100"
+            >
+              <div
+                class="bg-[url(images/pc-boy-1.jpg)] bg-cover bg-center rounded-2xl w-full h-full flex items-center flex-col justify-between py-5 md:py-0 md:justify-around flex-wrap"
+              >
+                <div
+                  class="lg:flex uppercase items-center md:absolute h-fit rounded-lg left-[55%] top-10 border border-gray-400 bg-white py-1 px-4 md:w-80 md:hidden w-full"
+                >
+                  <p class="text-5xl text-[#AA9DDD] font-bold text-nowrap">
+                    25<span class="align-top"
+                      ><i class="fa-solid fa-plus align-middle text-2xl"></i
+                    ></span>
+                  </p>
+                  <p class="text-gray-400 text-wrap">
+                    years of Expeince in It Solutions
+                  </p>
+                </div>
+                <div
+                  class="flex md:absolute left-[calc(50%-110px)] bottom-5 rounded-2xl py-2 px-3 bg-white justify-center md:items-center gap-2 lg:gap-5 h-fit flex-col lg:flex-row w-full items-start md:w-fit"
+                >
+                  <p>1000+ trsuted customers</p>
+                  <div class="flex gap-2 ps-5 lg:ps-0">
+                    <img
+                      src="images/u1.jfif"
+                      alt=""
+                      class="w-8 h-8 -ml-4 aspect-square rounded-full object-center object-cover -px-3"
+                    />
+                    <img
+                      src="images/u2.png"
+                      alt=""
+                      class="w-8 h-8 -ml-4 aspect-square rounded-full object-center object-cover -px-3"
+                    />
+                    <img
+                      src="images/u3.jfif"
+                      alt=""
+                      class="w-8 h-8 -ml-4 aspect-square rounded-full object-center object-cover -px-3"
+                    />
+                    <span
+                      class="-ml-4 rounded-full flex justify-center w-7.5 items-center bg-[#5230DA] aspect-square"
+                    >
+                      <i class="fa-solid fa-arrow-right text-sm text-white"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-20 px-3.5">
+        <div class="max-w-410 mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative">
+            <div class="lg:col-span-1 md:col-span-2 col-span-1">
+              <img
+                src="images/side-man.jpg"
+                alt=""
+                class="object-center object-cover w-full max-h-120 h-full lg:rounded-l-2xl lg:rounded-t-none md:rounded-lr-none rounded-t-2xl"
+              />
+            </div>
+            <div
+              class="bg-[#43347C] border-r border-gray-400 md:rounded-bl-2xl lg:rounded-bl-none"
+            >
+              <div class="flex flex-col text-white">
+                <div
+                  class="flex items-center gap-5 border-b border-gray-400 px-6 py-7"
+                >
+                  <div
+                    class="text-4xl px-3 bg-[#72679D] aspect-square py-2 rounded-full"
+                  >
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <div class="flex gap-3 flex-col">
+                    <h2 class="text-5xl font-medium">
+                      1500 <span class="text-base align-super -ml-3">+</span>
+                    </h2>
+                    <h3 class="text-gray-100">Clinet Worldwide</h3>
+                    <p class="line-clamp-3 text-gray-300 text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam recusandae reprehenderit laudantium, dolorem earum
+                      at, consequatur laboriosam doloremque sequi voluptatibus,
+                      quod debitis nesciunt optio aspernatur explicabo.
+                      Praesentium magnam distinctio est?
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center gap-5 px-6 py-7 border-b md:border-b-0 border-gray-400"
+                >
+                  <div
+                    class="text-4xl px-3 bg-[#72679D] aspect-square py-2 rounded-full"
+                  >
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <div class="flex gap-3 flex-col">
+                    <h2 class="text-5xl font-medium">100</h2>
+                    <h3 class="text-gray-100">Clinet Worldwide</h3>
+                    <p class="line-clamp-3 text-gray-300 text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam recusandae reprehenderit laudantium, dolorem earum
+                      at, consequatur laboriosam doloremque sequi voluptatibus,
+                      quod debitis nesciunt optio aspernatur explicabo.
+                      Praesentium magnam distinctio est?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#43347C] lg:rounded-r-2xl rounded-b-2xl md:rounded-bl-none"
+            >
+              <div class="flex flex-col text-white">
+                <div
+                  class="flex items-center gap-5 border-b border-gray-400 px-6 py-7"
+                >
+                  <div
+                    class="text-4xl px-3 bg-[#72679D] aspect-square py-2 rounded-full"
+                  >
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <div class="flex gap-3 flex-col">
+                    <h2 class="text-5xl font-medium">
+                      120 <span class="text-base align-super -ml-3">+</span>
+                    </h2>
+                    <h3 class="text-gray-100">Clinet Worldwide</h3>
+                    <p class="line-clamp-3 text-gray-300 text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam recusandae reprehenderit laudantium, dolorem earum
+                      at, consequatur laboriosam doloremque sequi voluptatibus,
+                      quod debitis nesciunt optio aspernatur explicabo.
+                      Praesentium magnam distinctio est?
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-5 px-6 py-7">
+                  <div
+                    class="text-4xl px-3 bg-[#72679D] aspect-square py-2 rounded-full"
+                  >
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <div class="flex gap-3 flex-col">
+                    <h2 class="text-5xl font-medium">
+                      98<span class="text-base align-super">%</span>
+                    </h2>
+                    <h3 class="text-gray-100">Clinet Worldwide</h3>
+                    <p class="line-clamp-3 text-gray-300 text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Numquam recusandae reprehenderit laudantium, dolorem earum
+                      at, consequatur laboriosam doloremque sequi voluptatibus,
+                      quod debitis nesciunt optio aspernatur explicabo.
+                      Praesentium magnam distinctio est?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#E6DFFF] translate-1/2 md:top-[65%] md:left-[39%] lg:top-[25%] lg:left-[58%] xl:left-[60.5%] w-25 aspect-square text-center md:flex justify-center items-center flex-col hidden absolute rounded-full text-xs"
+            >
+              <p><i class="fa-solid fa-arrow-up rotate-45 text-lg"></i></p>
+              <p>commited to growth</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rating my-20">
+        <div class="app-container relative">
+          <div
+            class="text-center flex justify-center flex-col mx-auto items-center gap-3 md:w-2/3 mb-8"
+          >
+            <h2
+              class="bg-[#5230DA] px-3 py-2 capitalize w-fit text-white text-2xl rounded"
+            >
+              testimonial
+            </h2>
+            <h3
+              class="md:text-3xl text-lg mt-3 font-medium capitalize text-gray-800"
+            >
+              whats our customer say?
+            </h3>
+            <p class="text-justify md:text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              voluptatibus possimus quia illum amet ratione eligendi vero
+            </p>
+          </div>
+
+          <div class="carousel mt-10">
+            <div
+              class="flex flex-col bg-[#F7F8F8] gap-10 p-8 rounded-2xl border border-gray-300 relative"
+            >
+              <div class="text-[#5230DA]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="text-sm mt-5">
+                <q
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  dolores, tempore a laboriosam quibusdam doloremque placeat
+                  quaerat corporis fugiat natus.</q
+                >
+              </div>
+              <div class="flex items-center gap-5 mt-8">
+                <img
+                  src="images/u1.jfif"
+                  alt=""
+                  class="aspect-square rounded-full w-10"
+                />
+                <div>
+                  <h3 class="font-semibold">David L.</h3>
+                  <p class="text-sm">CTO, xyz Solutions</p>
+                </div>
+              </div>
+              <span
+                class="text-[#5230DA] opacity-50 text-3xl absolute left-3/4 top-2/3"
+                ><i class="fa-solid fa-quote-right"></i
+              ></span>
+            </div>
+            <div
+              class="flex flex-col bg-[#F7F8F8] gap-10 p-8 rounded-2xl border border-gray-300 relative"
+            >
+              <div class="text-[#5230DA]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="text-sm mt-5">
+                <q
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  dolores, tempore a laboriosam quibusdam doloremque placeat
+                  quaerat corporis fugiat natus.</q
+                >
+              </div>
+              <div class="flex items-center gap-5 mt-8">
+                <img
+                  src="images/u1.jfif"
+                  alt=""
+                  class="aspect-square rounded-full w-10"
+                />
+                <div>
+                  <h3 class="font-semibold">David L.</h3>
+                  <p class="text-sm">CTO, xyz Solutions</p>
+                </div>
+              </div>
+              <span
+                class="text-[#5230DA] opacity-50 text-3xl absolute left-3/4 top-2/3"
+                ><i class="fa-solid fa-quote-right"></i
+              ></span>
+            </div>
+            <div
+              class="flex flex-col bg-[#F7F8F8] gap-10 p-8 rounded-2xl border border-gray-300 relative"
+            >
+              <div class="text-[#5230DA]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="text-sm mt-5">
+                <q
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  dolores, tempore a laboriosam quibusdam doloremque placeat
+                  quaerat corporis fugiat natus.</q
+                >
+              </div>
+              <div class="flex items-center gap-5 mt-8">
+                <img
+                  src="images/u1.jfif"
+                  alt=""
+                  class="aspect-square rounded-full w-10"
+                />
+                <div>
+                  <h3 class="font-semibold">David L.</h3>
+                  <p class="text-sm">CTO, xyz Solutions</p>
+                </div>
+              </div>
+              <span
+                class="text-[#5230DA] opacity-50 text-3xl absolute left-3/4 top-2/3"
+                ><i class="fa-solid fa-quote-right"></i
+              ></span>
+            </div>
+            <div
+              class="flex flex-col bg-[#F7F8F8] gap-10 p-8 rounded-2xl border border-gray-300 relative"
+            >
+              <div class="text-[#5230DA]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="text-sm mt-5">
+                <q
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  dolores, tempore a laboriosam quibusdam doloremque placeat
+                  quaerat corporis fugiat natus.</q
+                >
+              </div>
+              <div class="flex items-center gap-5 mt-8">
+                <img
+                  src="images/u1.jfif"
+                  alt=""
+                  class="aspect-square rounded-full w-10"
+                />
+                <div>
+                  <h3 class="font-semibold">David L.</h3>
+                  <p class="text-sm">CTO, xyz Solutions</p>
+                </div>
+              </div>
+              <span
+                class="text-[#5230DA] opacity-50 text-3xl absolute left-3/4 top-2/3"
+                ><i class="fa-solid fa-quote-right"></i
+              ></span>
+            </div>
+            <div
+              class="flex flex-col bg-[#F7F8F8] gap-10 p-8 rounded-2xl border border-gray-300 relative"
+            >
+              <div class="text-[#5230DA]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="text-sm mt-5">
+                <q
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  dolores, tempore a laboriosam quibusdam doloremque placeat
+                  quaerat corporis fugiat natus.</q
+                >
+              </div>
+              <div class="flex items-center gap-5 mt-8">
+                <img
+                  src="images/u1.jfif"
+                  alt=""
+                  class="aspect-square rounded-full w-10"
+                />
+                <div>
+                  <h3 class="font-semibold">David L.</h3>
+                  <p class="text-sm">CTO, xyz Solutions</p>
+                </div>
+              </div>
+              <span
+                class="text-[#5230DA] opacity-50 text-3xl absolute left-3/4 top-2/3"
+                ><i class="fa-solid fa-quote-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="flex justify-center gap-5 mt-3">
+            <button
+              class="bg-[#252525] xl:absolute top-[64%] -z-10 left-12.5 text-white aspect-square flex justify-center items-center lg:w-7 md:w-8 rounded-full"
+            >
+              <i class="fa-solid fa-arrow-left xl:text-black text-white"></i>
+            </button>
+            <button
+              class="bg-[#252525] xl:absolute top-[64%] -z-10 right-12.5 text-white aspect-square flex justify-center items-center lg:w-7 md:w-8 rounded-full"
+            >
+              <i class="fa-solid fa-arrow-right xl:text-black text-white"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-20 px-3.5">
+        <div class="max-w-410 mx-auto bg-[#EDEAFB] rounded-2xl">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:px-10 md:px-5 lg:gap-10 md:gap-4 md:py-5 py-10 gap-10 p-3"
+          >
+            <div class="flex flex-col gap-5 h-fit my-auto">
+              <h2
+                class="bg-[#5230DA] px-4 py-1 capitalize w-fit text-white text-2xl rounded-lg"
+              >
+                Leardership
+              </h2>
+              <h3
+                class="lg:text-3xl md:text-2xl text-lg capitalize text-gray-800 font-medium"
+              >
+                meet the incredible <br />
+                ind behinds our success
+              </h3>
+              <p class="text-gray-700 text-justify md:text-left">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatum deleniti ratione enim sit! Corrupti ad cumque labore
+                tempora aut animi asperiores architecto assumenda nostrum,
+                laudantium sapiente fugit, quos quam facilis.
+              </p>
+              <button
+                type="button"
+                class="bg-[#5230DA] hover:bg-[#4320ce] px-8 py-2.5 text-white rounded-lg font-semibold w-fit"
+              >
+                All teams members
+              </button>
+              <span class="text-sm font-medium">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <button class="text-[#5837DB] m-2">
+                  Apply now
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+              </span>
+            </div>
+
+            <div class="h-full content-center">
+              <img
+                src="images/pc-boy-2.jpg"
+                alt=""
+                class="lg:object-center object-cover w-full md:h-fit lg:h-140 h-120 rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="20">
+        <div class="app-container">
+          <div
+            class="text-center flex justify-center flex-col mx-auto items-center gap-3 md:w-3/4 mb-8"
+          >
+            <h2
+              class="bg-[#5230DA] px-3 py-2 capitalize w-fit text-white md:text-2xl text-lg rounded"
+            >
+              our blog
+            </h2>
+            <h3
+              class="lg:text-3xl md:text-2xl text-lg mt-2 font-medium capitalize text-gray-800"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              mollitia!
+            </h3>
+          </div>
+
+          <div class="grid md:grid-cols-3 grid-cols-1">
+            <div class="flex md:p-3 flex-col gap-3">
+              <div
+                class="bg-[url(images/t1.jpg)] w-full p-3 min-h-75 bg-no-repeat rounded-2xl flex bg-cover gap-3 bg-center"
+              >
+                <p
+                  class="bg-[#5230DA] px-3 py-2 h-fit rounded-full text-white text-sm font-medium"
+                >
+                  AI For Business
+                </p>
+                <p
+                  class="bg-[#9A4ADF] px-3 py-2 h-fit rounded-full text-white text-sm font-medium"
+                >
+                  marketing
+                </p>
+              </div>
+              <div class="text-sm text-gray-500 font-medium px-5 md:px-2">
+                <ol class="flex gap-10 md:gap-8 list-disc">
+                  <li><span>By Vincent Pham</span></li>
+                  <li><time datetime="25-12-2025">25 Dec 2025</time></li>
+                </ol>
+              </div>
+              <div>
+                <h4 class="font-semibold">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  placeat.
+                </h4>
+              </div>
+              <div class="text-[#765AE1]">
+                <button type="" class="capitalize font-semibold">
+                  continue reading
+                  <span><i class="fa-solid fa-arrow-right ml-1"></i> </span>
+                </button>
+              </div>
+            </div>
+            <div class="md:flex md:p-3 hidden flex-col gap-3">
+              <div
+                class="bg-[url(images/t2.jpg)] w-full p-3 min-h-75 bg-no-repeat rounded-2xl flex bg-cover gap-3 bg-center"
+              >
+                <p
+                  class="bg-[#5230DA] px-3 py-2 h-fit rounded-full text-white text-sm font-medium"
+                >
+                  AI For Business
+                </p>
+                <p
+                  class="bg-[#9A4ADF] px-3 py-2 h-fit rounded-full text-white text-sm font-medium"
+                >
+                  marketing
+                </p>
+              </div>
+              <div class="text-sm text-gray-500 font-medium px-5 md:px-2">
+                <ol class="flex gap-10 md:gap-8 list-disc">
+                  <li><span>By Vincent Pham</span></li>
+                  <li><time datetime="25-12-2025">25 Dec 2025</time></li>
+                </ol>
+              </div>
+              <div>
+                <h4 class="font-semibold">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  placeat.
+                </h4>
+              </div>
+              <div class="text-[#765AE1]">
+                <button type="" class="capitalize font-semibold">
+                  continue reading
+                  <span><i class="fa-solid fa-arrow-right ml-1"></i> </span>
+                </button>
+              </div>
+            </div>
+            <div class="md:flex md:p-3 hidden flex-col gap-3">
+              <div
+                class="bg-[url(images/t3.jpg)] w-full p-3 min-h-75 bg-no-repeat rounded-2xl flex bg-cover gap-3 bg-center"
+              >
+                <p
+                  class="bg-[#5230DA] px-3 py-2 h-fit rounded-full text-white text-sm font-medium"
+                >
+                  AI For Business
+                </p>
+                <p
+                  class="bg-[#9A4ADF] px-3 py-2 h-fit rounded-full text-white text-sm font-medium"
+                >
+                  marketing
+                </p>
+              </div>
+              <div class="text-sm text-gray-500 font-medium px-5 md:px-2">
+                <ol class="flex gap-10 md:gap-8 list-disc">
+                  <li><span>By Vincent Pham</span></li>
+                  <li><time datetime="25-12-2025">25 Dec 2025</time></li>
+                </ol>
+              </div>
+              <div>
+                <h4 class="font-semibold">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
+                  placeat.
+                </h4>
+              </div>
+              <div class="text-[#765AE1]">
+                <button type="" class="capitalize font-semibold">
+                  continue reading
+                  <span><i class="fa-solid fa-arrow-right ml-1"></i> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-20 px-3.5">
+        <div class="max-w-400 mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div>
+              <img
+                src="images/pc-boy-3.jpg"
+                alt=""
+                class="object-center object-cover w-full md:rounded-l-2xl rounded-t-2xl md:rounded-t-none h-full"
+              />
+            </div>
+            <div
+              class="h-full bg-linear-to-r from-[#8673D5] via-[#6550BC] to-[#5B44B4] md:rounded-r-2xl rounded-b-2xl md:rounded-bl-none"
+            >
+              <div
+                class="md:p-10 flex flex-col text-white md:gap-7 gap-4 px-2 pb-12 h-full justify-center mt-5 md:mt-auto"
+              >
+                <div>
+                  <h2 class="md:text-3xl text-lg font-medium text-center">
+                    lest's solve your IT chanllenges-start today!
+                  </h2>
+                </div>
+                <div>
+                  <ul
+                    class="flex flex-wrap items-center gap-5 justify-center text-black"
+                  >
+                    <li
+                      class="bg-white rounded-full w-fit px-2 py-1 text-center flex justify-center items-center"
+                    >
+                      <span
+                        class="rounded-full aspect-square justify-center items-center flex w-7"
+                      >
+                        <img
+                          src="images/tick.png"
+                          alt=""
+                          class="inline-block"
+                        />
+                      </span>
+                      <span class="ml-2">24/7 online support</span>
+                    </li>
+                    <li
+                      class="bg-white rounded-full w-fit px-2 py-1 text-center flex justify-center items-center"
+                    >
+                      <span
+                        class="rounded-full aspect-square justify-center items-center flex w-7"
+                      >
+                        <img
+                          src="images/tick.png"
+                          alt=""
+                          class="inline-block"
+                        />
+                      </span>
+                      <span class="ml-2">free consultation</span>
+                    </li>
+                    <li
+                      class="bg-white rounded-full w-fit px-2 py-1 text-center flex justify-center items-center"
+                    >
+                      <span
+                        class="rounded-full aspect-square justify-center items-center flex w-7"
+                      >
+                        <img
+                          src="images/tick.png"
+                          alt=""
+                          class="inline-block"
+                        />
+                      </span>
+                      <span class="ml-2">multingual support</span>
+                    </li>
+                  </ul>
+                  <p class="my-4 text-gray-100 text-sm">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quasi possimus, nihil similique voluptate consectetur nobis
+                    vel fuga enim illo corrupti, iusto ipsam architecto maiores
+                    consequuntur id
+                  </p>
+                </div>
+
+                <div class="flex gap-5 justify-center">
+                  <button class="flex gap-2 flex-col">
+                    <span
+                      class="bg-[#BCB3E0] rounded-lg w-18 justify-center items-center flex h-15"
+                      ><i
+                        class="fa-solid fa-phone-volume text-[#7C67CD] text-2xl"
+                      ></i
+                    ></span>
+                    <p class="text-sm font-medium">
+                      call us
+                      <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </p>
+                  </button>
+                  <button class="flex gap-2 flex-col">
+                    <span
+                      class="bg-[#BCB3E0] rounded-lg w-18 justify-center items-center flex h-15"
+                      ><i
+                        class="fa-solid fa-comment-dots text-[#7C67CD] text-2xl"
+                      ></i
+                    ></span>
+                    <p class="text-sm font-medium">chat with us</p>
+                  </button>
+                  <button class="flex gap-2 flex-col">
+                    <span
+                      class="bg-[#BCB3E0] aspect rounded-lg w-18 justify-center items-center flex h-15"
+                      ><i
+                        class="fa-solid fa-comment-dots text-[#7C67CD] text-2xl"
+                      ></i
+                    ></span>
+                    <p class="text-sm font-medium">See Location</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="app-container">
+          <div class="flex my-15 gap-15 justify-center overflow-hidden">
+            <img src="images/logoipsum-321.svg" alt="" />
+            <img src="images/logoipsum-342.svg" alt="" />
+            <img
+              src="images/logoipsum-345.svg"
+              alt=""
+              class="hidden md:block"
+            />
+            <img
+              src="images/logoipsum-348.svg"
+              alt=""
+              class="hidden md:block"
+            />
+            <img
+              src="images/logoipsum-364.svg"
+              alt=""
+              class="hidden lg:block"
+            />
+            <img
+              src="images/logoipsum-408.svg"
+              alt=""
+              class="hidden lg:block"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- fixed arrow to go top -->
+    <div
+      class="fixed bottom-10 right-5 bg-[#151A25] border-2 border-[#5035BF] aspect-square w-10 z-30 flex justify-center items-center rounded-full animate-bounce"
+    >
+      <a href="#">
+        <i class="fa-solid fa-arrow-up-long text-white"></i>
+      </a>
+    </div>
+
+    <footer class="bg-[#43347C] text-white">
+      <div class="app-container">
+        <div class="flex justify-between pt-15">
+          <p class="text-3xl font-bold">Logo</p>
+          <ul class="flex gap-4 items-center">
+            <li
+              class="rounded-full border-gray-200 border px-4 py-2 aspect-square"
+            >
+              <a href="">
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+              </a>
+            </li>
+            <li
+              class="rounded-full border-gray-200 border px-3 py-2.5 aspect-square"
+            >
+              <a href="">
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </a>
+            </li>
+            <li
+              class="rounded-full border-gray-200 border px-3.5 py-2.5 aspect-square"
+            >
+              <a href="">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+              </a>
+            </li>
+            <li
+              class="rounded-full border-gray-200 border px-3 py-2.5 aspect-square"
+            >
+              <a href="">
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="h-1.5 text-gray-200 my-5" />
+
+        <div
+          class="grid gap-8 md:gap-15 lg:grid-cols-5 md:grid-cols-2 grid-cols-1"
+        >
+          <div>
+            <h2 class="capitalize text-lg font-medium mb-5">
+              bussiness contact
+            </h2>
+            <ul class="flex flex-col gap-1.5">
+              <li class="mt-2">
+                <a href=""
+                  ><i
+                    class="fa-solid fa-location-dot bg-[#695D96] px-2.5 py-2 rounded-full mr-2"
+                  ></i
+                  >+91 9876543210</a
+                >
+              </li>
+              <li class="mt-2">
+                <a href=""
+                  ><i
+                    class="fa-solid fa-phone-volume bg-[#695D96] px-2 py-2 rounded-full mr-2"
+                  ></i
+                  >+91 9876543210</a
+                >
+              </li>
+              <li class="mt-2">
+                <a href=""
+                  ><i
+                    class="fa-solid fa-envelope-circle-check bg-[#695D96] px-2 py-2.5 rounded-full mr-2"
+                  ></i
+                  >xyz@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2">
+            <h2 class="capitalize text-lg font-medium mb-5">
+              subscribe news letter
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              debitis.
+            </p>
+
+            <div class="relative rounded my-3 w-full max-w-80">
+              <input
+                type="email"
+                placeholder="Enter Email"
+                class="bg-white px-3 py-1.5 focus-visible:outline-2 outline-[#dad6cf] text-gray-900 rounded-full w-full"
+              />
+              <button
+                class="absolute right-2 rounded-full px-2 py-0.5 top-1 bg-[#252525]"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div>
+            <h2 class="capitalize text-lg font-medium mb-5">our serivices</h2>
+            <ul class="flex flex-col gap-2.5 text-sm">
+              <li><a href="">web deisgn</a></li>
+              <li><a href="">mobile app design</a></li>
+              <li><a href="">digital marketing</a></li>
+              <li><a href="">website devlelopment</a></li>
+              <li><a href="">artifical intelligence</a></li>
+              <li><a href="">cyber security</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="capitalize text-lg font-medium mb-5">quick links</h2>
+            <ul class="flex flex-col gap-2.5 text-sm">
+              <li><a href="">abou us</a></li>
+              <li><a href="">our team</a></li>
+              <li><a href="">pricing</a></li>
+              <li><a href="">case studies</a></li>
+              <li><a href="">blog</a></li>
+              <li><a href="">contact us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="h-1.5 text-gray-200 my-5" />
+
+        <div class="flex flex-wrap md:justify-between justify-center">
+          <div>
+            <p>copyrights &copy; 2025 all rights reserved</p>
+          </div>
+          <ul class="flex gap-5">
+            <li class="hover:cursor-pointer"><a href="">privcy policy</a></li>
+            <li class="hover:cursor-pointer"><a href="">terms & cond.</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- carousel script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.min.js"></script>
+    <script>
+      // Get references to the elements
+      const menuButton = document.getElementById("menu-button");
+      const menuItems = document.getElementById("menu-items");
+      const menuIconOpen = document.getElementById("menu-icon-open");
+      const menuIconClose = document.getElementById("menu-icon-close");
+
+      // Add click event listener to the button
+      menuButton.addEventListener("click", () => {
+        // Toggle the 'hidden' class on the menu items
+        menuItems.classList.toggle("hidden");
+        // Toggle the 'hidden' class on the icons to switch between hamburger and close icons
+        menuIconOpen.classList.toggle("hidden");
+        menuIconClose.classList.toggle("hidden");
+      });
+
+      // Optional: Close the menu when a link is clicked (useful for single-page apps)
+      document.querySelectorAll("#menu-items a").forEach((link) => {
+        link.addEventListener("click", () => {
+          // Check if the screen size is less than 'lg' (otherwise menu should stay open)
+          if (window.innerWidth < 1024) {
+            // Tailwind's default 'lg' breakpoint is 1024px
+            menuItems.classList.add("hidden");
+            menuIconOpen.classList.remove("hidden");
+            menuIconClose.classList.add("hidden");
+          }
+        });
+      });
+
+      $(document).ready(function () {
+        $(".carousel").slick({
+          slidesToShow: 3,
+          dots: true,
+          centerMode: true,
+        });
+      });
+    </script>
+  </body>
+</html>
